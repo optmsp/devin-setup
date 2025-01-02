@@ -1,5 +1,7 @@
 # Python Documentation Process Overview
 
+> **Note to Developers**: This is a guide for you to understand the documentation process. To actually document your code, you will need to copy and paste the specific playbook files (mentioned below) to Devin at each phase of the process.
+
 This guide provides developers with a high-level overview of the phased approach to documenting Python code. It outlines the process that will occur when using Devin to document your Python codebase. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
 
 ### Overview
