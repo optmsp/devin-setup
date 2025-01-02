@@ -1,4 +1,6 @@
-Hi Devin! This playbook provides a high-level overview of the phased approach to documenting Python code. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
+# Python Documentation Process Overview
+
+This guide provides developers with a high-level overview of the phased approach to documenting Python code. It outlines the process that will occur when using Devin to document your Python codebase. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
 
 ### Overview
 
@@ -26,20 +28,21 @@ The documentation process is broken down into three phases:
 - Mypy or similar type checker (if available)
 
 ### Process Flow
-1. Begin with Phase 1 (Module/Class Documentation)
-2. Request user approval of Phase 1 documentation
-3. Proceed to Phase 2 (Method Documentation)
-4. Request user approval of Phase 2 documentation
-5. Complete Phase 3 (Variable Documentation)
-6. Request final user approval
+1. Copy the Phase 1 playbook (`python-doc-step1-classes-playbook.md`) to Devin
+2. Devin will document modules/classes and request your approval
+3. Copy the Phase 2 playbook (`python-doc-step2-methods-playbook.md`) to Devin
+4. Devin will document methods and request your approval
+5. Copy the Phase 3 playbook (`python-doc-step3-variables-playbook.md`) to Devin
+6. Devin will document variables and request your final approval
 
 ### Important Notes
-- Each phase must be completed and approved before proceeding
-- Follow the Python Code Documentation KB guidelines
-- Use mypy for type hint validation when available
-- Focus on clarity and maintainability
+- Each phase must be completed and approved before proceeding to the next
+- Devin will follow the Python Code Documentation KB guidelines
+- Devin will use mypy for type hint validation when available
+- Documentation will focus on clarity and maintainability
 
-For detailed implementation steps, refer to the phase-specific playbooks:
-- Phase 1: `python-doc-step1-classes-playbook.md`
-- Phase 2: `python-doc-step2-methods-playbook.md`
-- Phase 3: `python-doc-step3-variables-playbook.md`
+### Implementation Steps
+To begin documentation with Devin, copy and paste the following playbooks in sequence:
+1. Phase 1 (Modules/Classes): Copy `python-doc-step1-classes-playbook.md` to Devin
+2. Phase 2 (Methods): Copy `python-doc-step2-methods-playbook.md` to Devin after Phase 1 approval
+3. Phase 3 (Variables): Copy `python-doc-step3-variables-playbook.md` to Devin after Phase 2 approval

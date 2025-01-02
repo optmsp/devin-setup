@@ -1,4 +1,6 @@
-Hi Devin! This playbook provides a high-level overview of the phased approach to documenting PHP code. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
+# PHP Documentation Process Overview
+
+This guide provides developers with a high-level overview of the phased approach to documenting PHP code. It outlines the process that will occur when using Devin to document your PHP codebase. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
 
 ### Overview
 
@@ -25,20 +27,21 @@ The documentation process is broken down into three phases:
 - PHPStan or similar static analysis tool (if available)
 
 ### Process Flow
-1. Begin with Phase 1 (Class Documentation)
-2. Request user approval of Phase 1 documentation
-3. Proceed to Phase 2 (Method Documentation)
-4. Request user approval of Phase 2 documentation
-5. Complete Phase 3 (Variable Documentation)
-6. Request final user approval
+1. Copy the Phase 1 playbook (`php-doc-step1-classes-playbook.md`) to Devin
+2. Devin will document classes and request your approval
+3. Copy the Phase 2 playbook (`php-doc-step2-methods-playbook.md`) to Devin
+4. Devin will document methods and request your approval
+5. Copy the Phase 3 playbook (`php-doc-step3-variables-playbook.md`) to Devin
+6. Devin will document variables and request your final approval
 
 ### Important Notes
-- Each phase must be completed and approved before proceeding
-- Follow the PHP Code Documentation KB guidelines
-- Use PHPStan for validation when available
-- Focus on clarity and maintainability
+- Each phase must be completed and approved before proceeding to the next
+- Devin will follow the PHP Code Documentation KB guidelines
+- Devin will use PHPStan for validation when available
+- Documentation will focus on clarity and maintainability
 
-For detailed implementation steps, refer to the phase-specific playbooks:
-- Phase 1: `php-doc-step1-classes-playbook.md`
-- Phase 2: `php-doc-step2-methods-playbook.md`
-- Phase 3: `php-doc-step3-variables-playbook.md`
+### Implementation Steps
+To begin documentation with Devin, copy and paste the following playbooks in sequence:
+1. Phase 1 (Classes): Copy `php-doc-step1-classes-playbook.md` to Devin
+2. Phase 2 (Methods): Copy `php-doc-step2-methods-playbook.md` to Devin after Phase 1 approval
+3. Phase 3 (Variables): Copy `php-doc-step3-variables-playbook.md` to Devin after Phase 2 approval
