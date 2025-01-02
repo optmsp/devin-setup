@@ -1,12 +1,11 @@
-# React Project Initialization Template
+Hi Devin! I need you to help me set up a React project following our team's best practices and configuration standards.
 
-This template provides best practices for initializing a new Devin session with React project configuration knowledge.
+## Project Requirements
 
-## Initial Knowledge Set
+Please implement the following configurations and standards for this React project:
 
-When creating a new Devin session for a React project, provide these configuration preferences:
+1. Please set up ESLint and Prettier with these exact configurations:
 
-### Code Style and Linting
 ```json
 {
   "eslint": {
@@ -26,7 +25,8 @@ When creating a new Devin session for a React project, provide these configurati
 }
 ```
 
-### CI/CD Configuration
+2. Create this GitHub Actions workflow file at `.github/workflows/ci.yml`:
+
 ```yaml
 name: React CI/CD
 
@@ -49,35 +49,31 @@ jobs:
       - run: npm test
 ```
 
-### Project Structure
+3. Set up the following project structure and ensure all new code follows this organization:
+
 ```
 src/
-  components/
-  hooks/
-  pages/
-  services/
-  utils/
-  styles/
+  components/  # Reusable React components
+  hooks/       # Custom React hooks
+  pages/       # Route components
+  services/    # API and external service integrations
+  utils/       # Helper functions and utilities
+  styles/      # Global styles and theme configuration
 ```
 
-## How to Use with Devin
+4. Install and configure these essential development tools:
+   - ESLint for code linting
+   - Prettier for code formatting
+   - GitLens for Git integration
+   - ES7+ React/Redux/React-Native snippets
+   - npm Intellisense for package management
 
-1. Create a new Devin session
-2. Provide this configuration as initial knowledge:
-   ```
-   Please set up a React project with:
-   - ESLint and Prettier for code quality
-   - Semicolons required at end of statements
-   - Single quotes for strings
-   - 2-space indentation
-   - GitHub Actions CI/CD with linting and testing
-   - Component names in PascalCase
-   - JSX brackets on new lines
-   ```
+Additional Requirements:
+- Use semantic commit messages (feat:, fix:, docs:, etc.)
+- Set up pre-commit hooks to run linting before commits
+- Follow React naming conventions (PascalCase for components)
+- Add JSDoc comments for components and functions
+- Include README.md with setup and development instructions
+- Place JSX closing brackets on new lines for better readability
 
-## Common Extensions and Tools
-- ESLint
-- Prettier
-- GitLens
-- ES7+ React/Redux/React-Native snippets
-- npm Intellisense
+Please create a pull request once you've implemented these configurations. Make sure to test the linting and CI workflow before submitting.

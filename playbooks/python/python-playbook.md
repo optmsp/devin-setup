@@ -1,12 +1,11 @@
-# Python Project Initialization Template
+Hi Devin! I need you to help me set up a Python project following our team's best practices and configuration standards.
 
-This template provides best practices for initializing a new Devin session with Python project configuration knowledge.
+## Project Requirements
 
-## Initial Knowledge Set
+Please implement the following configurations and standards for this Python project:
 
-When creating a new Devin session for a Python project, provide these configuration preferences:
+1. Please set up the following code style tools with these exact configurations in pyproject.toml:
 
-### Code Style and Linting
 ```ini
 # pyproject.toml
 [tool.black]
@@ -25,7 +24,8 @@ good-names = ['i', 'j', 'k', 'ex', 'Run', '_']
 disable = ['C0111', 'C0103']
 ```
 
-### CI/CD Configuration
+2. Create this GitHub Actions workflow file at `.github/workflows/ci.yml`:
+
 ```yaml
 name: Python CI/CD
 
@@ -53,36 +53,37 @@ jobs:
       - run: pytest
 ```
 
-### Project Structure
+3. Set up the following project structure and ensure all new code follows this organization:
+
 ```
 src/
-  core/
-  utils/
-  services/
-  models/
+  core/       # Core business logic
+  utils/      # Helper functions and utilities
+  services/   # External service integrations
+  models/     # Data models and schemas
 tests/
-  unit/
-  integration/
+  unit/      # Unit tests
+  integration/# Integration tests
 ```
 
-## How to Use with Devin
+4. Install and configure these essential development tools:
+   - Python extension for language support
+   - Pylance for type checking
+   - Black Formatter for code formatting
+   - GitLens for Git integration
+   - Python Test Explorer for test management
 
-1. Create a new Devin session
-2. Provide this configuration as initial knowledge:
-   ```
-   Please set up a Python project with:
-   - Black for code formatting
-   - Flake8 and Pylint for code quality
-   - 88 character line length
-   - PEP 8 style guide compliance
-   - GitHub Actions CI/CD with linting and testing
-   - Type hints required
-   - Docstrings required
-   ```
+Additional Requirements:
+- Use semantic commit messages (feat:, fix:, docs:, etc.)
+- Set up pre-commit hooks for Black, Flake8, and Pylint
+- Follow PEP 8 style guide strictly
+- Add type hints to all functions and classes
+- Include detailed docstrings for all modules, classes, and functions
+- Set up pytest as the testing framework
+- Create a comprehensive README.md with setup instructions
 
-## Common Extensions and Tools
-- Python
-- Pylance
-- Black Formatter
-- GitLens
-- Python Test Explorer
+Please create a pull request once you've implemented these configurations. Make sure to:
+- Test all linting configurations
+- Verify CI workflow passes
+- Include example tests
+- Document development setup process
