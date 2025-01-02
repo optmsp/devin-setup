@@ -16,12 +16,21 @@ This repository aims to standardize and optimize the initialization of Devin ses
 ```
 ├── playbooks/        # Collection of initialization playbooks
 │   ├── vuejs/       # Vue.js best practices
-│   │   └── vuejs-playbook.md
+│   │   └── vuejs-playbook.md         # Vue.js setup
 │   ├── react/       # React best practices
-│   │   └── react-playbook.md
-│   └── python/      # Python best practices
-│       └── python-playbook.md
+│   │   └── react-playbook.md         # React setup
+│   ├── python/      # Python best practices
+│   │   └── python-playbook.md        # Python setup
+│   ├── php/         # PHP best practices
+│   │   └── php-doc-kb.md            # PHP documentation (Knowledge Bank)
+│   └── meta/        # Meta playbooks
+       └── playbook-creation-playbook.md
 ```
+
+### File Naming Conventions
+
+- **Playbooks**: Use `-playbook.md` suffix for all playbooks (e.g., `vuejs-playbook.md`, `vuejs-primevue-playbook.md`)
+- **Knowledge Bank**: Use `-kb.md` suffix for files meant to be added to Devin's Knowledge Bank (e.g., `php-doc-kb.md`)
 
 ## Usage
 
@@ -52,6 +61,9 @@ We welcome contributions from the community! To contribute:
 
 Please ensure your contributions:
 - Follow the established directory structure
+- Use appropriate file naming conventions:
+  - `-playbook.md` for all playbooks (e.g., `vuejs-playbook.md`, `vuejs-primevue-playbook.md`)
+  - `-kb.md` for Knowledge Bank files
 - Include clear documentation in markdown format
 - Provide practical examples and configurations
 - Follow existing formatting conventions
