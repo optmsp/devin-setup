@@ -1,12 +1,11 @@
-# Vue.js Project Initialization Template
+Hi Devin! I need you to help me set up a Vue.js project following our team's best practices and configuration standards.
 
-This template provides best practices for initializing a new Devin session with Vue.js project configuration knowledge.
+## Project Requirements
 
-## Initial Knowledge Set
+Please implement the following configurations and standards for this Vue.js project:
 
-When creating a new Devin session for a Vue.js project, provide these configuration preferences:
+1. Please set up ESLint and Prettier with these exact configurations:
 
-### Code Style and Linting
 ```json
 {
   "eslint": {
@@ -24,7 +23,8 @@ When creating a new Devin session for a Vue.js project, provide these configurat
 }
 ```
 
-### CI/CD Configuration
+2. Create this GitHub Actions workflow file at `.github/workflows/ci.yml`:
+
 ```yaml
 name: Vue.js CI/CD
 
@@ -47,34 +47,30 @@ jobs:
       - run: npm run test:unit
 ```
 
-### Project Structure
+3. Set up the following project structure and ensure all new code follows this organization:
+
 ```
 src/
-  assets/
-  components/
-  views/
-  router/
-  store/
-  utils/
+  assets/      # Static files like images and fonts
+  components/  # Reusable Vue components
+  views/       # Page-level components
+  router/      # Vue Router configuration
+  store/       # State management (Vuex/Pinia)
+  utils/       # Helper functions and utilities
 ```
 
-## How to Use with Devin
+4. Install and configure these essential development tools:
+   - Volar for Vue.js language support
+   - ESLint for code linting
+   - Prettier for code formatting
+   - GitLens for Git integration
+   - npm Intellisense for package management
 
-1. Create a new Devin session
-2. Provide this configuration as initial knowledge:
-   ```
-   Please set up a Vue.js project with:
-   - ESLint and Prettier for code quality
-   - Semicolons required at end of statements
-   - Single quotes for strings
-   - 2-space indentation
-   - GitHub Actions CI/CD with linting and testing
-   - Component names in PascalCase
-   ```
+Additional Requirements:
+- Use semantic commit messages (feat:, fix:, docs:, etc.)
+- Set up pre-commit hooks to run linting before commits
+- Follow Vue.js style guide for component naming (PascalCase)
+- Add JSDoc comments for components and functions
+- Include README.md with setup and development instructions
 
-## Common Extensions and Tools
-- Volar (Vue Language Features)
-- ESLint
-- Prettier
-- GitLens
-- npm Intellisense
+Please create a pull request once you've implemented these configurations. Make sure to test the linting and CI workflow before submitting.
