@@ -1,11 +1,11 @@
-Hi Devin! This playbook will guide you through documenting PHP code in a project folder. Please follow these instructions carefully.
+Hi Devin! This playbook will guide you through Phase 1 of documenting PHP code, focusing specifically on class-level documentation. This is part of a phased approach where we'll document classes first, then methods, and finally variables.
 
 ### Prerequisites
 - Access to the target PHP project folder
 - Knowledge of PHP documentation standards (refer to "PHP Code Documentation KB" in your knowledge base)
 - PHPStan or similar static analysis tool for validation (if available in the project)
 
-### Instructions
+### Phase 1: Class Documentation Instructions
 
 1. **Initial Setup**
    ```bash
@@ -28,58 +28,28 @@ Hi Devin! This playbook will guide you through documenting PHP code in a project
      {
      ```
 
-3. **Documentation Process**
+3. **Class Documentation Process**
    For each class in your inventory:
 
-   a. **Class Documentation**
    ```php
    /**
     * [Brief class description]
     *
     * [Detailed explanation of class purpose and functionality]
+    * Focus on the class's overall responsibility and role in the system.
+    * Do not document methods or properties in this phase.
     */
    ```
 
-   b. **Property Documentation**
-   ```php
-   /**
-    * Database connection instance
-    */
-   private $db;
+   Note: Method and property documentation will be handled in Phase 2 and Phase 3 respectively.
 
-   /**
-    * @inheritdoc
-    */
-   protected $config;
-
-   /**
-    * @property string $name User's full name
-    * @property-read int $id User's unique identifier
-    */
-   class User
-   ```
-
-   c. **Method Documentation**
-   ```php
-   /**
-    * Authenticates a user with the given credentials
-    *
-    * @param string $username User's login name
-    * @param string $password User's password
-    * @return bool True if authentication successful
-    * @throws AuthenticationException When credentials are invalid
-    */
-   public function authenticate(string $username, string $password): bool
-   ```
-
-4. **Documentation Checklist**
+4. **Phase 1 Documentation Checklist**
    For each file, ensure:
    - [ ] Class has a clear, concise description
-   - [ ] Properties are documented with types and descriptions
-   - [ ] Methods have parameter and return type documentation
-   - [ ] Exceptions are documented where thrown
-   - [ ] Magic properties are documented with @property tags
-   - [ ] Inherited documentation uses @inheritdoc where appropriate
+   - [ ] Class purpose and responsibility is well documented
+   - [ ] Documentation follows no-prefix rule (avoid "Description:" or "Summary:")
+   - [ ] Documentation is focused on class-level concerns only
+   - [ ] Documentation is clear and helpful for new developers
 
 5. **Validation Steps**
    ```bash
@@ -96,9 +66,9 @@ Hi Devin! This playbook will guide you through documenting PHP code in a project
    - Ensure no @see tags are used (as per KB guidelines)
    - Confirm documentation is helpful for new developers
 
-### Example Documentation
+### Example Class Documentation
 
-Here's a complete example of a well-documented class:
+Here's an example of well-documented class-level documentation:
 
 ```php
 /**
@@ -106,59 +76,32 @@ Here's a complete example of a well-documented class:
  *
  * Handles storage, retrieval, and validation of user-specific
  * configuration options with support for default values and
- * type validation.
+ * type validation. Provides a centralized way to manage user
+ * preferences while ensuring type safety and proper defaults.
+ * 
+ * This class serves as the primary interface for all user
+ * preference operations in the system.
  */
 class UserPreferences
 {
-    /**
-     * Default preferences for new users
-     */
-    private array $defaults;
-
-    /**
-     * @inheritdoc
-     */
-    protected $storage;
-
-    /**
-     * Creates a new preferences manager for the specified user
-     *
-     * @param int $userId User's unique identifier
-     * @param array $defaults Optional default preferences
-     * @throws UserNotFoundException When user doesn't exist
-     */
-    public function __construct(int $userId, array $defaults = [])
-    {
-        $this->defaults = $defaults;
-    }
-
-    /**
-     * Retrieves a user preference value
-     *
-     * @param string $key Preference identifier
-     * @param mixed $default Value to return if preference not set
-     * @return mixed The preference value or default if not found
-     */
-    public function get(string $key, $default = null)
-    {
-        // Implementation
-    }
+    // Properties and methods will be documented in later phases
 }
-```
 
-### Completion Checklist
+### Phase 1 Completion Checklist
 
-Before considering the documentation complete:
+Before proceeding to Phase 2:
 
-1. [ ] All non-test classes are documented
-2. [ ] Documentation is clear and concise
-3. [ ] No @see tags are used
-4. [ ] All inherited documentation uses @inheritdoc
-5. [ ] PHPStan/IDE validation passes
-6. [ ] Documentation follows project standards
-7. [ ] All magic properties are documented
-8. [ ] Exception documentation is complete
+1. [ ] All non-test classes have clear, concise descriptions
+2. [ ] Class-level documentation explains purpose and responsibilities
+3. [ ] No prefixes are used in documentation
+4. [ ] Documentation follows project standards
+5. [ ] PHPStan/IDE validation passes for class documentation
+6. [ ] Documentation is helpful for new developers
 
-Remember to integrate any existing documentation that contains important caveats or TODOs, and ensure all documentation serves to make the code more maintainable for future developers.
+Remember:
+- Focus only on class-level documentation in this phase
+- Methods and properties will be documented in later phases
+- Ensure documentation serves to make the code more maintainable
+- Get approval before proceeding to Phase 2 (Method Documentation)
 
 Need help? Refer to the "PHP Code Documentation KB" in your knowledge base for detailed guidelines and best practices.

@@ -1,11 +1,11 @@
-Hi Devin! This playbook will guide you through documenting Python code in a project folder. Please follow these instructions carefully.
+Hi Devin! This playbook will guide you through Phase 1 of documenting Python code, focusing specifically on module and class-level documentation. This is part of a phased approach where we'll document modules and classes first, then methods, and finally variables and properties.
 
 ### Prerequisites
 - Access to the target Python project folder
 - Knowledge of Python documentation standards (refer to "Python Code Documentation KB" in your knowledge base)
 - Understanding of PEP 257 and PEP 484
 
-### Instructions
+### Phase 1: Module and Class Documentation Instructions
 
 1. **Initial Setup**
    ```bash
@@ -29,79 +29,33 @@ Hi Devin! This playbook will guide you through documenting Python code in a proj
      """
      ```
 
-3. **Documentation Process**
-   For each module:
+3. **Module and Class Documentation Process**
+   For each module and class:
 
-   a. **Module Documentation**
    ```python
    """
-   [Brief module description]
+   [Brief module/class description]
 
-   [Detailed explanation of module purpose and functionality]
+   [Detailed explanation of module/class purpose and functionality]
+   Focus on the module/class's overall responsibility and role in the system.
+   Describe what problem it solves and how it fits into the application.
+   Do not document methods or attributes in this phase.
 
    Examples:
-       [Usage examples]
+       Basic usage example (without implementation details)
    """
    ```
 
-   b. **Class Documentation**
-   ```python
-   from typing import Optional, List
+   Note: Methods and attributes documentation will be handled in Phase 2 and Phase 3 respectively.
 
-   class UserProfile:
-       """
-       User profile management class.
-
-       Handles creation, updates, and deletion of user profiles
-       with proper validation and error handling.
-
-       Args:
-           user_id: Unique identifier for the user
-           name: User's full name
-           email: User's email address
-
-       Attributes:
-           id (int): The user's unique identifier
-           email (str): The user's email address
-           is_active (bool): Whether the user account is active
-       """
-
-       def __init__(self, user_id: int, name: str, email: str) -> None:
-           self.id = user_id
-           self.name = name
-           self.email = email
-   ```
-
-   c. **Method Documentation**
-   ```python
-   def update_profile(self, 
-                     name: Optional[str] = None, 
-                     email: Optional[str] = None) -> bool:
-       """
-       Update the user's profile information.
-
-       Args:
-           name: New name for the user
-           email: New email address for the user
-
-       Returns:
-           bool: True if update was successful, False otherwise
-
-       Raises:
-           ValueError: If email format is invalid
-           UserNotFoundError: If user doesn't exist
-       """
-   ```
-
-4. **Documentation Checklist**
-   For each module:
-   - [ ] Module has clear docstring
-   - [ ] Classes are documented with docstrings
-   - [ ] Methods have parameter documentation
-   - [ ] Type hints are included
-   - [ ] Examples provided for complex features
-   - [ ] Exceptions are documented
-   - [ ] Variables have type annotations
+4. **Phase 1 Documentation Checklist**
+   For each module/class:
+   - [ ] Module/class has clear, concise docstring
+   - [ ] Purpose and responsibility is well documented
+   - [ ] Documentation follows no-prefix rule (avoid "Description:" or "Summary:")
+   - [ ] Documentation is focused on module/class-level concerns only
+   - [ ] Documentation explains role in the application
+   - [ ] Documentation is clear and helpful for new developers
 
 5. **Validation Steps**
    - Test documentation with doctest
@@ -115,100 +69,61 @@ Hi Devin! This playbook will guide you through documenting Python code in a proj
    - Check for missing type hints
    - Confirm documentation helps new developers
 
-### Example Documentation
+### Example Phase 1 Documentation
 
-Here's a complete example of a well-documented Python module:
+Here's an example of well-documented module and class-level documentation:
 
 ```python
 """
 User Authentication Module
 
-This module provides user authentication functionality including
-login, logout, and session management.
+A comprehensive authentication system that manages user access and
+security within the application. This module serves as the central
+authority for all authentication-related operations, ensuring
+consistent and secure user authentication across the entire system.
+
+The module is designed with security best practices in mind and
+integrates seamlessly with the application's user management and
+authorization systems.
 
 Examples:
+    Basic module usage (implementation details in later phases):
     >>> from auth import Authenticator
     >>> auth = Authenticator()
-    >>> user = auth.login("user@example.com", "password123")
-    >>> print(user.is_authenticated)
-    True
 """
-
-from typing import Optional, Dict, Any
-from datetime import datetime
 
 class Authenticator:
     """
-    Handles user authentication and session management.
-
-    This class provides methods for user login, logout, and
-    session validation with proper security measures.
-
-    Attributes:
-        session_timeout (int): Session timeout in minutes
-        max_attempts (int): Maximum login attempts before lockout
+    Core authentication service for the application.
+    
+    This class serves as the primary authentication provider,
+    implementing industry-standard security practices and providing
+    a robust foundation for user authentication. It coordinates
+    with other security services to maintain a secure environment
+    and manages the complete authentication lifecycle.
+    
+    The authenticator is designed to be scalable and maintainable,
+    supporting various authentication methods and security policies
+    while remaining easy to extend for future requirements.
     """
-
-    def __init__(self, session_timeout: int = 30, max_attempts: int = 3) -> None:
-        """
-        Initialize the authenticator.
-
-        Args:
-            session_timeout: Timeout in minutes for user sessions
-            max_attempts: Maximum number of failed login attempts
-        """
-        self.session_timeout = session_timeout
-        self.max_attempts = max_attempts
-
-    def login(self, email: str, password: str) -> Optional['User']:
-        """
-        Authenticate a user and create a session.
-
-        Args:
-            email: User's email address
-            password: User's password
-
-        Returns:
-            User: Authenticated user object if successful,
-                 None if authentication fails
-
-        Raises:
-            ValueError: If email or password is empty
-            AccountLockedException: If account is locked
-        """
-        if not email or not password:
-            raise ValueError("Email and password required")
-        
-        # Implementation details...
-        return user
-
-    def validate_session(self, session_id: str) -> bool:
-        """
-        Check if a session is valid and not expired.
-
-        Args:
-            session_id: The session identifier to validate
-
-        Returns:
-            bool: True if session is valid, False otherwise
-        """
-        # Implementation details...
-        return True
+    # Methods and attributes will be documented in later phases
+    pass
 ```
 
-### Completion Checklist
+### Phase 1 Completion Checklist
 
-Before considering documentation complete:
+Before proceeding to Phase 2:
 
-1. [ ] All modules are documented
-2. [ ] Documentation follows PEP 257
-3. [ ] Type hints follow PEP 484
-4. [ ] Classes have docstrings
-5. [ ] Methods have parameter docs
-6. [ ] Examples are provided
-7. [ ] Exceptions are documented
-8. [ ] Variables have type hints
+1. [ ] All modules and classes have clear, concise descriptions
+2. [ ] Module/class purposes and responsibilities are well documented
+3. [ ] Documentation follows no-prefix rule
+4. [ ] Documentation focuses on module/class-level concerns
+5. [ ] Documentation explains roles in the application
+6. [ ] Documentation helps new developers understand the system
 
-Remember to integrate any existing documentation and ensure all documentation follows Python's documentation standards.
+Remember:
+- Focus only on module/class-level documentation in this phase
+- Methods and attributes will be documented in later phases
+- Get approval before proceeding to Phase 2 (Method Documentation)
 
 Need help? Refer to the "Python Code Documentation KB" in your knowledge base for detailed guidelines and best practices.
