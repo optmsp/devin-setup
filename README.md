@@ -16,12 +16,22 @@ This repository aims to standardize and optimize the initialization of Devin ses
 ```
 ├── playbooks/        # Collection of initialization playbooks
 │   ├── vuejs/       # Vue.js best practices
-│   │   └── vuejs-playbook.md
+│   │   └── vuejs-basic-playbook.md    # Basic Vue.js setup
 │   ├── react/       # React best practices
-│   │   └── react-playbook.md
-│   └── python/      # Python best practices
-│       └── python-playbook.md
+│   │   └── react-basic-playbook.md    # Basic React setup
+│   ├── python/      # Python best practices
+│   │   └── python-basic-playbook.md   # Basic Python setup
+│   ├── php/         # PHP best practices
+│   │   └── php-doc-kb.md             # PHP documentation (Knowledge Bank)
+│   └── meta/        # Meta playbooks
+       └── playbook-creation-basic-playbook.md
 ```
+
+### File Naming Conventions
+
+- **Basic Playbooks**: Use `-basic-playbook.md` suffix for standard setup playbooks (e.g., `vuejs-basic-playbook.md`)
+- **Specific Playbooks**: Use descriptive names for specific implementations (e.g., `vuejs-primevue.md`)
+- **Knowledge Bank**: Use `-kb.md` suffix for files meant to be added to Devin's Knowledge Bank (e.g., `php-doc-kb.md`)
 
 ## Usage
 
@@ -39,7 +49,7 @@ Please set up a Vue.js project with:
 - GitHub Actions CI/CD with linting and testing
 ```
 
-See [playbooks/vuejs/vuejs-playbook.md](playbooks/vuejs/vuejs-playbook.md) for complete configuration.
+See [playbooks/vuejs/vuejs-basic-playbook.md](playbooks/vuejs/vuejs-basic-playbook.md) for complete configuration.
 
 ## Contributing
 
@@ -52,6 +62,10 @@ We welcome contributions from the community! To contribute:
 
 Please ensure your contributions:
 - Follow the established directory structure
+- Use appropriate file naming conventions:
+  - `-basic-playbook.md` for standard setup playbooks
+  - `-kb.md` for Knowledge Bank files
+  - Descriptive names for specific implementations
 - Include clear documentation in markdown format
 - Provide practical examples and configurations
 - Follow existing formatting conventions
