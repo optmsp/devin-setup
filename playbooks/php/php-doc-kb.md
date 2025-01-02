@@ -1,6 +1,6 @@
-### PHP Code Documentation Playbook
+### PHP Code Documentation KB
 
-Devin, add this to your knowledge base for future reference.
+Devin, add this to your knowledge base for future reference. File it as "PHP Code Documentation KB" to make it easy to reference.
 
 #### General Principles
 
