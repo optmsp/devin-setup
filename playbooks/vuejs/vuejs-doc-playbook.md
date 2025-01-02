@@ -1,11 +1,11 @@
-Hi Devin! This playbook will guide you through documenting Vue.js code in a project folder. Please follow these instructions carefully.
+Hi Devin! This playbook will guide you through Phase 1 of documenting Vue.js code, focusing specifically on component-level documentation. This is part of a phased approach where we'll document components first, then methods, and finally props and events.
 
 ### Prerequisites
 - Access to the target Vue.js project folder
 - Knowledge of Vue.js documentation standards (refer to "Vue.js Code Documentation KB" in your knowledge base)
 - Vue.js DevTools for component inspection (if available)
 
-### Instructions
+### Phase 1: Component Documentation Instructions
 
 1. **Initial Setup**
    ```bash
@@ -35,60 +35,30 @@ Hi Devin! This playbook will guide you through documenting Vue.js code in a proj
      </script>
      ```
 
-3. **Documentation Process**
+3. **Component Documentation Process**
    For each component:
 
-   a. **Component Documentation**
    ```vue
    /**
     * [Brief component description]
     *
     * [Detailed explanation of component purpose and functionality]
+    * Focus on the component's overall responsibility and role in the system.
+    * Describe what problem it solves and how it fits into the application.
+    * Do not document props, events, or methods in this phase.
     */
    ```
 
-   b. **Props Documentation**
-   ```vue
-   export default {
-     props: {
-       /**
-        * The user's unique identifier
-        */
-       userId: {
-         type: Number,
-         required: true
-       },
-       /**
-        * Display mode for the profile card
-        */
-       mode: {
-         type: String,
-         default: 'compact',
-         validator: value => ['compact', 'full'].includes(value)
-       }
-     }
-   }
-   ```
+   Note: Props, events, and methods documentation will be handled in Phase 2 and Phase 3 respectively.
 
-   c. **Events Documentation**
-   ```vue
-   /**
-    * Emitted when the user profile is updated
-    * @event update:profile
-    * @property {Object} profile - Updated user profile data
-    */
-   this.$emit('update:profile', profile)
-   ```
-
-4. **Documentation Checklist**
+4. **Phase 1 Documentation Checklist**
    For each component:
-   - [ ] Component has clear description
-   - [ ] Props are documented with types and descriptions
-   - [ ] Events are documented with payload types
-   - [ ] Slots are documented with expected content
-   - [ ] Methods have parameter and return type documentation
-   - [ ] Examples provided for complex features
-   - [ ] Vuex interactions documented if present
+   - [ ] Component has clear, concise description
+   - [ ] Component's purpose and responsibility is well documented
+   - [ ] Documentation follows no-prefix rule (avoid "Description:" or "Summary:")
+   - [ ] Documentation is focused on component-level concerns only
+   - [ ] Documentation explains component's role in the application
+   - [ ] Documentation is clear and helpful for new developers
 
 5. **Validation Steps**
    - Test documentation in IDE
@@ -102,16 +72,14 @@ Hi Devin! This playbook will guide you through documenting Vue.js code in a proj
    - Check for missing prop/event documentation
    - Confirm documentation helps new developers
 
-### Example Documentation
+### Example Phase 1 Documentation
 
-Here's a complete example of a well-documented component:
+Here's an example of well-documented component-level documentation:
 
 ```vue
 <template>
   <div class="user-card">
-    <slot name="header"></slot>
-    <div class="user-info">{{ userName }}</div>
-    <slot name="footer"></slot>
+    <!-- Template implementation will be documented in later phases -->
   </div>
 </template>
 
@@ -119,61 +87,37 @@ Here's a complete example of a well-documented component:
 /**
  * User Card Component
  *
- * Displays user information in a customizable card layout
- * with support for header and footer slots.
+ * A reusable card component for displaying user information with a 
+ * consistent layout across the application. This component serves as
+ * the primary user interface element for showing user details in lists,
+ * grids, and individual profile views.
+ *
+ * The component is designed to be flexible and maintainable, supporting
+ * various display modes and customization options through its API.
+ * It integrates with the application's design system and follows
+ * accessibility best practices.
  */
 export default {
-  name: 'UserCard',
-
-  props: {
-    /**
-     * User's full name
-     */
-    userName: {
-      type: String,
-      required: true
-    },
-
-    /**
-     * Card display mode
-     */
-    mode: {
-      type: String,
-      default: 'standard',
-      validator: value => ['compact', 'standard', 'full'].includes(value)
-    }
-  },
-
-  /**
-   * Emitted when the card is clicked
-   * @event click:card
-   * @property {Object} user - User data object
-   */
-  methods: {
-    handleClick() {
-      this.$emit('click:card', {
-        name: this.userName,
-        mode: this.mode
-      })
-    }
-  }
+  name: 'UserCard'
+  // Props, methods, and events will be documented in later phases
 }
 </script>
 ```
 
-### Completion Checklist
+### Phase 1 Completion Checklist
 
-Before considering documentation complete:
+Before proceeding to Phase 2:
 
-1. [ ] All components are documented
-2. [ ] Documentation is clear and helpful
-3. [ ] Props have type definitions and descriptions
-4. [ ] Events are documented with payload types
-5. [ ] Slots are documented with usage examples
-6. [ ] Methods have clear documentation
-7. [ ] Component examples are provided
-8. [ ] Vuex interactions are documented
+1. [ ] All components have clear, concise descriptions
+2. [ ] Component purposes and responsibilities are well documented
+3. [ ] Documentation follows no-prefix rule
+4. [ ] Documentation focuses on component-level concerns
+5. [ ] Documentation explains component roles in the application
+6. [ ] Documentation helps new developers understand the system
 
-Remember to integrate any existing documentation and ensure all documentation makes the components more maintainable and reusable.
+Remember:
+- Focus only on component-level documentation in this phase
+- Props, events, and methods will be documented in later phases
+- Get approval before proceeding to Phase 2 (Method Documentation)
 
 Need help? Refer to the "Vue.js Code Documentation KB" in your knowledge base for detailed guidelines and best practices.

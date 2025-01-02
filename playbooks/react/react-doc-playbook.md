@@ -1,11 +1,11 @@
-Hi Devin! This playbook will guide you through documenting React code in a project folder. Please follow these instructions carefully.
+Hi Devin! This playbook will guide you through Phase 1 of documenting React code, focusing specifically on component-level documentation. This is part of a phased approach where we'll document components first, then methods, and finally props and hooks.
 
 ### Prerequisites
 - Access to the target React project folder
 - Knowledge of React documentation standards (refer to "React Code Documentation KB" in your knowledge base)
 - React Developer Tools for component inspection (if available)
 
-### Instructions
+### Phase 1: Component Documentation Instructions
 
 1. **Initial Setup**
    ```bash
@@ -35,59 +35,32 @@ Hi Devin! This playbook will guide you through documenting React code in a proje
       */
      ```
 
-3. **Documentation Process**
+3. **Component Documentation Process**
    For each component:
 
-   a. **Component Documentation**
    ```jsx
    /**
     * [Brief component description]
     *
     * [Detailed explanation of component purpose and functionality]
+    * Focus on the component's overall responsibility and role in the system.
+    * Describe what problem it solves and how it fits into the application.
+    * Do not document props, hooks, or methods in this phase.
     *
     * @component
     */
    ```
 
-   b. **Props Documentation**
-   ```jsx
-   import PropTypes from 'prop-types';
-   // or using TypeScript
-   interface UserProfileProps {
-     /**
-      * The user's unique identifier
-      */
-     userId: number;
-     /**
-      * Whether the profile is editable
-      * @default false
-      */
-     editable?: boolean;
-   }
-   ```
+   Note: Props, hooks, and methods documentation will be handled in Phase 2 and Phase 3 respectively.
 
-   c. **Hooks Documentation**
-   ```jsx
-   /**
-    * Custom hook for managing user data
-    *
-    * @param {number} userId - The user's unique identifier
-    * @returns {Object} User data and update functions
-    */
-   const useUserData = (userId) => {
-     // Implementation
-   };
-   ```
-
-4. **Documentation Checklist**
+4. **Phase 1 Documentation Checklist**
    For each component:
-   - [ ] Component has clear description
-   - [ ] Props are documented with types
-   - [ ] Custom hooks are documented
-   - [ ] Methods have parameter documentation
-   - [ ] Examples provided for complex features
-   - [ ] Context usage documented if present
-   - [ ] Event handlers documented
+   - [ ] Component has clear, concise description
+   - [ ] Component's purpose and responsibility is well documented
+   - [ ] Documentation follows no-prefix rule (avoid "Description:" or "Summary:")
+   - [ ] Documentation is focused on component-level concerns only
+   - [ ] Documentation explains component's role in the application
+   - [ ] Documentation is clear and helpful for new developers
 
 5. **Validation Steps**
    - Test documentation in IDE
@@ -101,90 +74,54 @@ Hi Devin! This playbook will guide you through documenting React code in a proje
    - Check for missing prop documentation
    - Confirm documentation helps new developers
 
-### Example Documentation
+### Example Phase 1 Documentation
 
-Here's a complete example of a well-documented component:
+Here's an example of well-documented component-level documentation:
 
 ```jsx
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /**
  * UserCard Component
  *
- * Displays user information in a card format with
- * optional editing capabilities.
+ * A foundational UI component for displaying user information in a 
+ * standardized card format across the application. This component
+ * serves as a key building block in user interfaces, providing a
+ * consistent way to present user data in various contexts.
+ *
+ * The component is designed with flexibility in mind, supporting
+ * different display modes and interaction patterns. It adheres to
+ * the application's design system and accessibility guidelines,
+ * making it a reliable choice for user-related displays.
  *
  * @component
- * @example
- * ```jsx
- * <UserCard
- *   userName="John Doe"
- *   role="Admin"
- *   onEdit={(userData) => handleEdit(userData)}
- * />
- * ```
  */
-const UserCard = ({ userName, role, onEdit, editable = false }) => {
-  /**
-   * Handles the edit button click
-   * @param {React.MouseEvent} event - The click event
-   */
-  const handleEditClick = (event) => {
-    onEdit({ userName, role });
-  };
-
+const UserCard = () => {
+  // Implementation details will be documented in later phases
   return (
     <div className="user-card">
-      <h3>{userName}</h3>
-      <p>{role}</p>
-      {editable && (
-        <button onClick={handleEditClick}>Edit</button>
-      )}
+      {/* Component implementation will be documented in later phases */}
     </div>
   );
-};
-
-UserCard.propTypes = {
-  /**
-   * The user's full name
-   */
-  userName: PropTypes.string.isRequired,
-  
-  /**
-   * The user's role in the system
-   */
-  role: PropTypes.string.isRequired,
-  
-  /**
-   * Callback fired when the edit button is clicked
-   * @param {Object} userData - The current user data
-   */
-  onEdit: PropTypes.func,
-  
-  /**
-   * Whether the card is editable
-   * @default false
-   */
-  editable: PropTypes.bool
 };
 
 export default UserCard;
 ```
 
-### Completion Checklist
+### Phase 1 Completion Checklist
 
-Before considering documentation complete:
+Before proceeding to Phase 2:
 
-1. [ ] All components are documented
-2. [ ] Documentation is clear and helpful
-3. [ ] Props have type definitions
-4. [ ] Custom hooks are documented
-5. [ ] Methods have clear documentation
-6. [ ] Component examples are provided
-7. [ ] Context usage is documented
-8. [ ] Event handlers are documented
+1. [ ] All components have clear, concise descriptions
+2. [ ] Component purposes and responsibilities are well documented
+3. [ ] Documentation follows no-prefix rule
+4. [ ] Documentation focuses on component-level concerns
+5. [ ] Documentation explains component roles in the application
+6. [ ] Documentation helps new developers understand the system
 
-Remember to integrate any existing documentation and ensure all documentation makes the components more maintainable and reusable.
+Remember:
+- Focus only on component-level documentation in this phase
+- Props, hooks, and methods will be documented in later phases
+- Get approval before proceeding to Phase 2 (Method Documentation)
 
 Need help? Refer to the "React Code Documentation KB" in your knowledge base for detailed guidelines and best practices.
