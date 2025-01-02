@@ -14,21 +14,20 @@ This repository aims to standardize and optimize the initialization of Devin ses
 ## Repository Structure
 
 ```
-├── vue/               # Vue.js best practices
-│   ├── ci-cd/        # CI/CD configurations
-│   ├── linting/      # ESLint and Prettier setup
-│   ├── style-guide/  # Coding standards
-│   └── templates/    # Project templates
-├── react/            # React best practices
-└── python/           # Python best practices
+├── playbooks/        # Collection of initialization playbooks
+│   ├── vuejs/       # Vue.js best practices
+│   │   └── vuejs-playbook.md
+│   ├── react/       # React best practices
+│   │   └── react-playbook.md
+│   └── python/      # Python best practices
+│       └── python-playbook.md
 ```
 
 ## Usage
 
 1. Choose your technology (Vue.js, React, or Python)
-2. Navigate to the corresponding directory
-3. Find the initialization template in the `templates` folder
-4. Copy the configuration and follow the setup instructions
+2. Navigate to the corresponding playbook in the `playbooks` directory
+3. Copy the configuration and follow the setup instructions
 
 ### Example: Vue.js Project Initialization
 ```
@@ -40,7 +39,7 @@ Please set up a Vue.js project with:
 - GitHub Actions CI/CD with linting and testing
 ```
 
-See [vue/templates/vue-project-init.md](vue/templates/vue-project-init.md) for complete configuration.
+See [playbooks/vuejs/vuejs-playbook.md](playbooks/vuejs/vuejs-playbook.md) for complete configuration.
 
 ## Contributing
 
