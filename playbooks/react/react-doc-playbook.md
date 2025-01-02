@@ -1,127 +1,45 @@
-Hi Devin! This playbook will guide you through Phase 1 of documenting React code, focusing specifically on component-level documentation. This is part of a phased approach where we'll document components first, then methods, and finally props and hooks.
+Hi Devin! This playbook provides a high-level overview of the phased approach to documenting React code. The documentation process is divided into three distinct phases to ensure thorough and organized documentation.
+
+### Overview
+
+The documentation process is broken down into three phases:
+
+1. **Phase 1: Component Documentation**
+   - Focus on component-level documentation
+   - Document overall purpose and responsibilities
+   - Refer to `react-doc-step1-classes-playbook.md` for implementation
+
+2. **Phase 2: Method Documentation**
+   - Document component methods and handlers
+   - Include parameter and return types
+   - Refer to `react-doc-step2-methods-playbook.md` for implementation
+
+3. **Phase 3: Props and Hooks Documentation**
+   - Document component props and hooks
+   - Include type information and constraints
+   - Refer to `react-doc-step3-variables-playbook.md` for implementation
 
 ### Prerequisites
 - Access to the target React project folder
-- Knowledge of React documentation standards (refer to "React Code Documentation KB" in your knowledge base)
+- Knowledge of React documentation standards (refer to "React Code Documentation KB")
 - React Developer Tools for component inspection (if available)
+- TypeScript/PropTypes configuration (if used)
 
-### Phase 1: Component Documentation Instructions
+### Process Flow
+1. Begin with Phase 1 (Component Documentation)
+2. Request user approval of Phase 1 documentation
+3. Proceed to Phase 2 (Method Documentation)
+4. Request user approval of Phase 2 documentation
+5. Complete Phase 3 (Props/Hooks Documentation)
+6. Request final user approval
 
-1. **Initial Setup**
-   ```bash
-   # List all React component files
-   find /path/to/folder -name "*.jsx" -o -name "*.tsx" -type f
-   ```
+### Important Notes
+- Each phase must be completed and approved before proceeding
+- Follow the React Code Documentation KB guidelines
+- Use TypeScript/PropTypes for type validation when available
+- Focus on clarity and maintainability
 
-2. **Component Inventory**
-   - Create a list of all components needing documentation
-   - For each component:
-     ```jsx
-     /**
-      * UserProfile Component
-      *
-      * Displays user information with editable fields and
-      * handles profile updates through a form interface.
-      *
-      * @component
-      * @example
-      * ```jsx
-      * <UserProfile
-      *   userId={123}
-      *   editable={true}
-      *   onUpdate={(data) => handleUpdate(data)}
-      * />
-      * ```
-      */
-     ```
-
-3. **Component Documentation Process**
-   For each component:
-
-   ```jsx
-   /**
-    * [Brief component description]
-    *
-    * [Detailed explanation of component purpose and functionality]
-    * Focus on the component's overall responsibility and role in the system.
-    * Describe what problem it solves and how it fits into the application.
-    * Do not document props, hooks, or methods in this phase.
-    *
-    * @component
-    */
-   ```
-
-   Note: Props, hooks, and methods documentation will be handled in Phase 2 and Phase 3 respectively.
-
-4. **Phase 1 Documentation Checklist**
-   For each component:
-   - [ ] Component has clear, concise description
-   - [ ] Component's purpose and responsibility is well documented
-   - [ ] Documentation follows no-prefix rule (avoid "Description:" or "Summary:")
-   - [ ] Documentation is focused on component-level concerns only
-   - [ ] Documentation explains component's role in the application
-   - [ ] Documentation is clear and helpful for new developers
-
-5. **Validation Steps**
-   - Test documentation in IDE
-   - Verify prop types work
-   - Check hook documentation
-   - Review with component examples
-
-6. **Final Review**
-   - Ensure all components are documented
-   - Verify documentation matches implementation
-   - Check for missing prop documentation
-   - Confirm documentation helps new developers
-
-### Example Phase 1 Documentation
-
-Here's an example of well-documented component-level documentation:
-
-```jsx
-import React from 'react';
-
-/**
- * UserCard Component
- *
- * A foundational UI component for displaying user information in a 
- * standardized card format across the application. This component
- * serves as a key building block in user interfaces, providing a
- * consistent way to present user data in various contexts.
- *
- * The component is designed with flexibility in mind, supporting
- * different display modes and interaction patterns. It adheres to
- * the application's design system and accessibility guidelines,
- * making it a reliable choice for user-related displays.
- *
- * @component
- */
-const UserCard = () => {
-  // Implementation details will be documented in later phases
-  return (
-    <div className="user-card">
-      {/* Component implementation will be documented in later phases */}
-    </div>
-  );
-};
-
-export default UserCard;
-```
-
-### Phase 1 Completion Checklist
-
-Before proceeding to Phase 2:
-
-1. [ ] All components have clear, concise descriptions
-2. [ ] Component purposes and responsibilities are well documented
-3. [ ] Documentation follows no-prefix rule
-4. [ ] Documentation focuses on component-level concerns
-5. [ ] Documentation explains component roles in the application
-6. [ ] Documentation helps new developers understand the system
-
-Remember:
-- Focus only on component-level documentation in this phase
-- Props, hooks, and methods will be documented in later phases
-- Get approval before proceeding to Phase 2 (Method Documentation)
-
-Need help? Refer to the "React Code Documentation KB" in your knowledge base for detailed guidelines and best practices.
+For detailed implementation steps, refer to the phase-specific playbooks:
+- Phase 1: `react-doc-step1-classes-playbook.md`
+- Phase 2: `react-doc-step2-methods-playbook.md`
+- Phase 3: `react-doc-step3-variables-playbook.md`
