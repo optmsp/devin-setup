@@ -17,11 +17,12 @@ Devin, add this to your knowledge base for future reference. File it as "React C
     - Note custom hooks that need documentation
 
 2. **Component-Level Documentation**
-    - Add clear component descriptions including:
+    - Document all components with:
         - Component's purpose and use cases
-        - Required dependencies or context providers
-        - Browser compatibility notes if applicable
-        - Performance considerations
+        - Dependencies and context requirements
+        - Browser compatibility considerations
+        - Performance optimizations
+    - Use `@inheritdoc` for inherited component documentation
 
 3. **Props Documentation**
     - Document all props with:
@@ -29,19 +30,21 @@ Devin, add this to your knowledge base for future reference. File it as "React C
         - Default values
         - Required/optional status
         - Validation requirements
+    - Use `@inheritdoc` for inherited props to avoid duplicating parent documentation
 
 4. **Hooks Documentation**
-    - Document custom hooks:
-        - Purpose and return values
-        - Dependencies array contents
-        - Cleanup functions
+    - Document all hooks with:
+        - Hook's purpose and return values
+        - Dependencies and cleanup functions
         - Usage examples
+    - Use `@inheritdoc` for inherited hook documentation
 
 5. **Methods Documentation**
-    - Document component methods:
+    - Document all methods with:
         - Purpose and parameters
         - Return values and side effects
-        - Usage context and examples
+        - Usage examples
+    - Use `@inheritdoc` for inherited methods to avoid duplicating parent documentation
 
 6. **Context Documentation**
     - Document Context providers/consumers:

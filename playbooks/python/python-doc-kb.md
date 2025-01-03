@@ -24,19 +24,23 @@ Devin, add this to your knowledge base for future reference. File it as "Python 
         - Usage examples
 
 3. **Class Documentation**
-    - Document classes with:
+    - Document all classes with:
         - Class purpose and behavior
         - Constructor parameters
         - Class attributes
         - Method overview
         - Usage examples
+    - Use `@inheritdoc` for inherited class documentation to avoid duplicating docstrings
 
 4. **Method Documentation**
-    - Document methods with:
+    - Document all methods with clear docstrings
+    - Use `@inheritdoc` for inherited methods to avoid duplicating docstrings
+    - For overridden methods, document changes while using `@inheritdoc` for unchanged aspects
+    - Include:
         - Purpose and functionality
-        - Parameters with types
-        - Return values
-        - Raised exceptions
+        - Parameters with type hints
+        - Return value types
+        - Exceptions
         - Usage examples
 
 5. **Function Documentation**

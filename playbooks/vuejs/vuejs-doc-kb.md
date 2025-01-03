@@ -16,35 +16,40 @@ Devin, add this to your knowledge base for future reference. File it as "Vue.js 
     - Identify shared/common components for thorough documentation
 
 2. **Component-Level Documentation**
-    - Add clear component descriptions including:
+    - Document all components with:
         - Component's purpose and use cases
-        - Required dependencies or plugins
-        - Browser compatibility notes if applicable
+        - Dependencies and plugins
+        - Browser compatibility considerations
+        - Performance optimizations
+    - Use `@inheritdoc` for inherited component documentation
 
 3. **Props Documentation**
     - Document all props with:
         - Type definitions
         - Default values
         - Required/optional status
-        - Validation rules if present
+        - Validation rules
+    - Use `@inheritdoc` for inherited props to avoid duplicating parent documentation
 
 4. **Events Documentation**
-    - Document emitted events:
+    - Document all events with:
         - Event names and triggers
         - Payload structure and types
-        - Usage examples for complex events
+        - Usage examples
+    - Use `@inheritdoc` for inherited events to avoid duplicating parent documentation
 
 5. **Methods Documentation**
-    - Document public methods:
+    - Document all methods with:
         - Purpose and return values
-        - Parameter types and descriptions
-        - Usage examples for complex methods
+        - Parameter types
+        - Usage examples
+    - Use `@inheritdoc` for inherited methods to avoid duplicating parent documentation
 
 6. **Slots Documentation**
-    - Document both named and default slots:
-        - Slot purpose and content expectations
-        - Scoped slot props if applicable
-        - Usage examples
+    - Document only slots defined in the component:
+        - Component-specific slot purposes
+        - Local scoped slot props
+        - Usage examples showing unique features
 
 7. **State Management**
     - Document Vuex interactions:
