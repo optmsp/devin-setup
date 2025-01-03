@@ -24,20 +24,21 @@ Devin, add this to your knowledge base for future reference. File it as "Python 
         - Usage examples
 
 3. **Class Documentation**
-    - Document classes with:
-        - Class purpose and behavior
-        - Constructor parameters
-        - Class attributes
-        - Method overview
-        - Usage examples
+    - Document non-inherited classes with:
+        - Class purpose and unique behavior
+        - Constructor parameters specific to this class
+        - Class-specific attributes (not inherited)
+        - Overview of new/overridden methods
+        - Usage examples demonstrating unique features
 
 4. **Method Documentation**
-    - Document methods with:
-        - Purpose and functionality
-        - Parameters with types
-        - Return values
-        - Raised exceptions
-        - Usage examples
+    - Document only non-inherited methods with:
+        - Purpose and specific functionality
+        - Parameters with type hints
+        - Return value types
+        - Class-specific exceptions
+        - Usage examples for new behavior
+    - For overridden methods, document only changes from parent
 
 5. **Function Documentation**
     - Document functions with:

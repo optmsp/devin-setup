@@ -17,31 +17,31 @@ Devin, add this to your knowledge base for future reference. File it as "React C
     - Note custom hooks that need documentation
 
 2. **Component-Level Documentation**
-    - Add clear component descriptions including:
-        - Component's purpose and use cases
-        - Required dependencies or context providers
-        - Browser compatibility notes if applicable
-        - Performance considerations
+    - Document non-inherited components with:
+        - Component's unique purpose and specific use cases
+        - Component-specific dependencies or context requirements
+        - Browser compatibility considerations if different from parent
+        - Performance optimizations specific to this component
 
 3. **Props Documentation**
-    - Document all props with:
-        - PropTypes or TypeScript interfaces
-        - Default values
-        - Required/optional status
-        - Validation requirements
+    - Document only component-specific props (not inherited):
+        - PropTypes or TypeScript interfaces for new props
+        - Default values for component-specific props
+        - Required/optional status for added props
+        - Custom validation requirements
 
 4. **Hooks Documentation**
-    - Document custom hooks:
-        - Purpose and return values
-        - Dependencies array contents
-        - Cleanup functions
-        - Usage examples
+    - Document only custom hooks defined in the component:
+        - Hook's specific purpose and return values
+        - Component-specific dependencies
+        - Local cleanup functions
+        - Usage examples showing unique features
 
 5. **Methods Documentation**
-    - Document component methods:
-        - Purpose and parameters
-        - Return values and side effects
-        - Usage context and examples
+    - Document only component-specific methods:
+        - Purpose and parameters of new methods
+        - Return values and component-specific effects
+        - Usage examples for overridden behavior
 
 6. **Context Documentation**
     - Document Context providers/consumers:

@@ -16,35 +16,36 @@ Devin, add this to your knowledge base for future reference. File it as "Vue.js 
     - Identify shared/common components for thorough documentation
 
 2. **Component-Level Documentation**
-    - Add clear component descriptions including:
-        - Component's purpose and use cases
-        - Required dependencies or plugins
-        - Browser compatibility notes if applicable
+    - Document non-inherited components with:
+        - Component's unique purpose and specific use cases
+        - Component-specific dependencies or plugins
+        - Browser compatibility considerations if different from parent
+        - Performance optimizations specific to this component
 
 3. **Props Documentation**
-    - Document all props with:
-        - Type definitions
-        - Default values
-        - Required/optional status
-        - Validation rules if present
+    - Document only component-specific props (not inherited):
+        - Type definitions for new props
+        - Default values for component-specific props
+        - Required/optional status for added props
+        - Custom validation rules specific to this component
 
 4. **Events Documentation**
-    - Document emitted events:
-        - Event names and triggers
-        - Payload structure and types
-        - Usage examples for complex events
+    - Document only component-specific events:
+        - Custom event names and triggers
+        - Component-specific payload structure
+        - Usage examples demonstrating unique features
 
 5. **Methods Documentation**
-    - Document public methods:
-        - Purpose and return values
-        - Parameter types and descriptions
-        - Usage examples for complex methods
+    - Document only component-specific methods:
+        - Purpose and return values of new methods
+        - Parameter types for component methods
+        - Usage examples for overridden behavior
 
 6. **Slots Documentation**
-    - Document both named and default slots:
-        - Slot purpose and content expectations
-        - Scoped slot props if applicable
-        - Usage examples
+    - Document only slots defined in the component:
+        - Component-specific slot purposes
+        - Local scoped slot props
+        - Usage examples showing unique features
 
 7. **State Management**
     - Document Vuex interactions:

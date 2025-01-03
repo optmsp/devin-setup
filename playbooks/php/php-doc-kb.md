@@ -20,15 +20,17 @@ Devin, add this to your knowledge base for future reference. File it as "PHP Cod
 
 3. **Method Documentation**
 
-    - Use `@inheritdoc` for methods where applicable to inherit documentation.
+    - Only document non-inherited methods with docblocks
+    - Keep method documentation clear and focused on the specific implementation
+    - For overridden methods, only document differences from parent implementation
 
 4. **Property Documentation**
 
-    - Document class variables with `@inheritdoc` when inherited.
-    - Add succinct docblocks for non-inherited properties.
-    - Use `@property` tags to document magic properties.
+    - Document only non-inherited class properties
+    - Keep property documentation succinct and focused on purpose
+    - Document magic properties in the class docblock only if they are defined in the current class
 
-5. **Avoid `@see` Tags**
+5. **Avoid Redundant Tags**
 
     - `@see` tags are difficult to keep current and should be omitted.
 
