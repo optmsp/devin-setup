@@ -17,31 +17,34 @@ Devin, add this to your knowledge base for future reference. File it as "React C
     - Note custom hooks that need documentation
 
 2. **Component-Level Documentation**
-    - Document non-inherited components with:
-        - Component's unique purpose and specific use cases
-        - Component-specific dependencies or context requirements
-        - Browser compatibility considerations if different from parent
-        - Performance optimizations specific to this component
+    - Document all components with:
+        - Component's purpose and use cases
+        - Dependencies and context requirements
+        - Browser compatibility considerations
+        - Performance optimizations
+    - Use `@inheritdoc` for inherited component documentation
 
 3. **Props Documentation**
-    - Document only component-specific props (not inherited):
-        - PropTypes or TypeScript interfaces for new props
-        - Default values for component-specific props
-        - Required/optional status for added props
-        - Custom validation requirements
+    - Document all props with:
+        - PropTypes or TypeScript interfaces
+        - Default values
+        - Required/optional status
+        - Validation requirements
+    - Use `@inheritdoc` for inherited props to avoid duplicating parent documentation
 
 4. **Hooks Documentation**
-    - Document only custom hooks defined in the component:
-        - Hook's specific purpose and return values
-        - Component-specific dependencies
-        - Local cleanup functions
-        - Usage examples showing unique features
+    - Document all hooks with:
+        - Hook's purpose and return values
+        - Dependencies and cleanup functions
+        - Usage examples
+    - Use `@inheritdoc` for inherited hook documentation
 
 5. **Methods Documentation**
-    - Document only component-specific methods:
-        - Purpose and parameters of new methods
-        - Return values and component-specific effects
-        - Usage examples for overridden behavior
+    - Document all methods with:
+        - Purpose and parameters
+        - Return values and side effects
+        - Usage examples
+    - Use `@inheritdoc` for inherited methods to avoid duplicating parent documentation
 
 6. **Context Documentation**
     - Document Context providers/consumers:

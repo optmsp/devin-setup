@@ -16,30 +16,34 @@ Devin, add this to your knowledge base for future reference. File it as "Vue.js 
     - Identify shared/common components for thorough documentation
 
 2. **Component-Level Documentation**
-    - Document non-inherited components with:
-        - Component's unique purpose and specific use cases
-        - Component-specific dependencies or plugins
-        - Browser compatibility considerations if different from parent
-        - Performance optimizations specific to this component
+    - Document all components with:
+        - Component's purpose and use cases
+        - Dependencies and plugins
+        - Browser compatibility considerations
+        - Performance optimizations
+    - Use `@inheritdoc` for inherited component documentation
 
 3. **Props Documentation**
-    - Document only component-specific props (not inherited):
-        - Type definitions for new props
-        - Default values for component-specific props
-        - Required/optional status for added props
-        - Custom validation rules specific to this component
+    - Document all props with:
+        - Type definitions
+        - Default values
+        - Required/optional status
+        - Validation rules
+    - Use `@inheritdoc` for inherited props to avoid duplicating parent documentation
 
 4. **Events Documentation**
-    - Document only component-specific events:
-        - Custom event names and triggers
-        - Component-specific payload structure
-        - Usage examples demonstrating unique features
+    - Document all events with:
+        - Event names and triggers
+        - Payload structure and types
+        - Usage examples
+    - Use `@inheritdoc` for inherited events to avoid duplicating parent documentation
 
 5. **Methods Documentation**
-    - Document only component-specific methods:
-        - Purpose and return values of new methods
-        - Parameter types for component methods
-        - Usage examples for overridden behavior
+    - Document all methods with:
+        - Purpose and return values
+        - Parameter types
+        - Usage examples
+    - Use `@inheritdoc` for inherited methods to avoid duplicating parent documentation
 
 6. **Slots Documentation**
     - Document only slots defined in the component:
